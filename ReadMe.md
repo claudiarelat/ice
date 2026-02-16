@@ -1,4 +1,13 @@
-# Backend
+# ICE - Personal Finance API
+
+Backend MVP built with FastAPI.
+
+## Features
+- Users
+- Transactions (income, expense, freeze)
+- Monthly summary
+- Edit & delete transactions
+
 
 backend/
 │
