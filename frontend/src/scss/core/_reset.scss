@@ -1,0 +1,14 @@
+/* Reset global bàsic */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  font-family: $font-family-base;
+  background-color: $bg-dark;
+  color: $text-light;
+}

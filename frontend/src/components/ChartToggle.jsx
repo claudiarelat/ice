@@ -1,4 +1,3 @@
-// src/components/ChartToggle.jsx
 import React, { useState } from "react";
 
 export default function ChartToggle({ onChange }) {
@@ -10,19 +9,20 @@ export default function ChartToggle({ onChange }) {
   };
 
   return (
-    <div className="flex gap-2 mt-4">
+    <>
       <button
-        className={`px-4 py-2 rounded ${type === "bar" ? "bg-blue-500 text-white" : "bg-gray-200"}`}
+        className={type === "bar" ? "active" : ""}
         onClick={() => handleChange("bar")}
       >
         Bar
       </button>
       <button
-        className={`px-4 py-2 rounded ${type === "pie" ? "bg-blue-500 text-white" : "bg-gray-200"}`}
+        className={type === "pie" ? "active" : ""}
         onClick={() => handleChange("pie")}
       >
         Pie
       </button>
-    </div>
+    </>
   );
 }
+

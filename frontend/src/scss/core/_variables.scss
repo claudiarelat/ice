@@ -1,0 +1,37 @@
+// src/scss/core/variables.scss
+
+// Fons i text
+// $bg-light: #f8fafc;          
+$bg-dark: #0f172a;           // fons dark mode
+$bg-card-light: #ffffff;     // card clara
+$bg-card-dark: #1e293b;      // card dark mode
+$text-light: #f8fafc;
+$text-dark: #1e293b;
+$text-muted: #64748b;        // gris suau per subtítols i info secundària
+
+// Accent freds
+$accent-blue: #3b82f6;
+$accent-teal: #14b8a6;
+$accent-indigo: #6366f1;
+$accent-cyan: #06b6d4;
+
+// Cards KPI (tons freds)
+$card-frozen: #cfe0fc;       // frozen KPI (blau clar)
+$card-saved: #bfdbfe;        // saved KPI (blau suau)
+$card-balance: #93c5fd;      // balance KPI (blau mitjà)
+$card-expenses: #60a5fa;     // expenses KPI (blau més intens)
+$card-income: #3b82f6;       // income KPI (accent blau fort)
+
+// Toggle & UI
+$toggle-bg: #e0f2fe;         // més suau per switch
+$font-family-base: 'Inter', sans-serif;
+
+// Text de KPI
+$card-title-color: #1e293b; // blau fosc gairebé negre per títols
+$card-value-color: #1e3a8a; // opcional: blau fosc per valors destacats
+// $bg-light: #f0f4f8; 
+$bg-light: #e6f0ff; // blau gel suau, fred i gèlid
+
+
+
+
