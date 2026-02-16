@@ -1,6 +1,7 @@
-# ICE - Personal Finance API
+# ICE - Personal Finance Application
 
 Backend MVP built with FastAPI.
+Frontend MVP with React + Vite.
 
 ## Features
 - Users
@@ -8,6 +9,7 @@ Backend MVP built with FastAPI.
 - Monthly summary
 - Edit & delete transactions
 
+### Backend
 
 backend/
 │
@@ -27,3 +29,25 @@ backend/
 │
 ├─ venv/                 # el teu entorn virtual
 └─ requirements.txt
+
+
+### Frontend
+
+src/
+├── pages/
+│   ├── Login.jsx
+│   ├── Dashboard.jsx
+│   ├── TransactionsPage.jsx
+│
+├── components/
+│   ├── SummaryCards.jsx
+│   ├── ChartSection.jsx
+│   ├── TransactionList.jsx
+│   ├── TransactionForm.jsx
+│
+├── services/
+│   └── api.js
+│
+├── App.jsx
+└── main.jsx
+
