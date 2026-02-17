@@ -1,15 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Dashboard from "./components/Dashboard";
-import Login from "./components/Login";
-import { AuthProvider, AuthContext } from "./context/AuthContext";
+import AuthPage from "./components/AuthPage"; // 🔹 el teu component combinat de Login+Register
+import { AuthProvider } from "./context/AuthContext";
 
 function ProtectedRoute({ children }) {
-  const { user } = React.useContext(AuthContext);
+  const { user } = React.useContext(AuthProvider._context); // o AuthContext
 
   if (!user || !user.authenticated) {
-    // Si no està loguejat, redirigim al login
-    return <Navigate to="/login" replace />;
+    return <Navigate to="/" replace />;
   }
 
   return children;
@@ -20,15 +19,16 @@ function App() {
     <AuthProvider>
       <Router>
         <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route 
-            path="/" 
+          <Route path="/" element={<AuthPage />} /> {/* Login+Register alhora */}
+          <Route
+            path="/dashboard"
             element={
               <ProtectedRoute>
                 <Dashboard />
               </ProtectedRoute>
-            } 
+            }
           />
+          <Route path="*" element={<Navigate to="/" replace />} /> {/* fallback */}
         </Routes>
       </Router>
     </AuthProvider>
@@ -36,6 +36,8 @@ function App() {
 }
 
 export default App;
+
+
 
 
 
