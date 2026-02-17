@@ -1,9 +1,7 @@
 
-@import './core/variables';
-@import './core/reset';
-
-// Import layout components
-@import './layout/dashboard';
+@use './core/variables';
+@use './core/reset';
+@use './layout/dashboard';
 
 
 

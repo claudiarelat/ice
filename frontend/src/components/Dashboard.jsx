@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import ChartToggle from "./ChartToggle";
-import "../scss/main.scss"; // només cal importar main.scss
-// import "../scss/layout/dashboard.scss";
+import "../scss/main.scss";
+import { AuthContext } from "../context/AuthContext";
 
 export default function Dashboard() {
+  const { logout } = useContext(AuthContext);
   const [chartType, setChartType] = useState("bar");
 
   // Funció per formatar els valors en euros
@@ -19,10 +20,18 @@ export default function Dashboard() {
 
   return (
     <div className="dashboard">
+      {/* Header amb logout */}
+      <div className="dashboard-header">
+        <h1>Dashboard</h1>
+        <button onClick={logout} className="logout-btn">
+          Logout
+        </button>
+      </div>
+
+      {/* Summary */}
       <h1>Summary</h1>
       <p className="summary-date">February 2026</p>
 
-      {/* Cards */}
       <div className="cards">
         {summaryData.map((item) => (
           <div key={item.title} className={`card ${item.colorClass}`}>
@@ -45,4 +54,5 @@ export default function Dashboard() {
     </div>
   );
 }
+
 

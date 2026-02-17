@@ -1,5 +1,7 @@
 /* Reset global bàsic */
 
+@use '../core/variables' as *;
+
 * {
   margin: 0;
   padding: 0;
